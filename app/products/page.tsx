@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Link from 'next/link';
 import DeliveryForm from '../components/DeliveryForm';
 import OrderForm from '../components/OrderForm';
 
@@ -359,11 +360,11 @@ export default function ProductsPage() {
             </div>
             
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-slate-300 hover:text-white transition-colors">Home</a>
-              <a href="/products" className="text-slate-300 hover:text-white transition-colors">Products</a>
-              <a href="#services" className="text-slate-300 hover:text-white transition-colors">Services</a>
-              <a href="#about" className="text-slate-300 hover:text-white transition-colors">About</a>
-              <a href="#contact" className="text-slate-300 hover:text-white transition-colors">Contact</a>
+              <Link href="/" className="text-slate-300 hover:text-white transition-colors">Home</Link>
+              <Link href="/products" className="text-slate-300 hover:text-white transition-colors">Products</Link>
+              <Link href="#services" className="text-slate-300 hover:text-white transition-colors">Services</Link>
+              <Link href="#about" className="text-slate-300 hover:text-white transition-colors">About</Link>
+              <Link href="#contact" className="text-slate-300 hover:text-white transition-colors">Contact</Link>
             </nav>
           </div>
           

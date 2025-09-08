@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import OrderForm from './components/OrderForm';
+import Link from 'next/link';
 
 export default function Home() {
   const [isOrderFormOpen, setIsOrderFormOpen] = useState(false);
@@ -130,8 +131,9 @@ export default function Home() {
             </motion.div>
 
             {/* Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            {/* <nav className="hidden md:flex items-center space-x-8">
               {['Home', 'Products', 'Services', 'About', 'Contact'].map((item, index) => (
+                
                 <motion.a
                   key={item}
                   href={item === 'Home' ? '/' : item === 'Products' ? '/products' : `#${item.toLowerCase()}`}
@@ -150,7 +152,7 @@ export default function Home() {
                   />
                 </motion.a>
               ))}
-            </nav>
+            </nav> */}
 
             {/* CTA Button */}
             <motion.button 
@@ -233,7 +235,7 @@ export default function Home() {
               Why Choose <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AL Furkan</span>?
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We're not just delivering water, we're delivering an experience that transforms 
+              We&apos;re not just delivering water, we&apos;re delivering an experience that transforms 
               the way you think about hydration.
             </p>
           </motion.div>
@@ -285,7 +287,7 @@ export default function Home() {
               What Our Customers Say
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers have to say 
+              Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say 
               about their experience with AL Furkan.
             </p>
           </motion.div>
@@ -322,7 +324,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-slate-600 leading-relaxed italic">
-                  "{testimonial.feedback}"
+                  &ldquo;{testimonial.feedback}&rdquo;
                 </p>
               </motion.div>
             ))}
@@ -384,11 +386,11 @@ export default function Home() {
             </div>
             
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-slate-300 hover:text-white transition-colors">Home</a>
-              <a href="/products" className="text-slate-300 hover:text-white transition-colors">Products</a>
-              <a href="#services" className="text-slate-300 hover:text-white transition-colors">Services</a>
-              <a href="#about" className="text-slate-300 hover:text-white transition-colors">About</a>
-              <a href="#contact" className="text-slate-300 hover:text-white transition-colors">Contact</a>
+              <Link href="/" className="text-slate-300 hover:text-white transition-colors">Home</Link>
+              <Link href="/products" className="text-slate-300 hover:text-white transition-colors">Products</Link>
+              <Link href="#services" className="text-slate-300 hover:text-white transition-colors">Services</Link>
+              <Link href="#about" className="text-slate-300 hover:text-white transition-colors">About</Link>
+              <Link href="#contact" className="text-slate-300 hover:text-white transition-colors">Contact</Link>
             </nav>
           </div>
           
